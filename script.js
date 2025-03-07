@@ -59,29 +59,13 @@ canvas.addEventListener("click", (event) => {
             hearts.splice(index, 1);
             score++;
             scoreDisplay.innerText = score;
-            createSparkleEffect(heart.x, heart.y);
             
-            if (score >= 10) {
+            if (score >= 20) {
                 loveLetter.style.display = "block";
             }
         }
     });
 });
-
-function createSparkleEffect(x, y) {
-    const sparkle = document.createElement("div");
-    sparkle.style.position = "absolute";
-    sparkle.style.left = `${x + canvas.offsetLeft}px`;
-    sparkle.style.top = `${y + canvas.offsetTop}px`;
-    sparkle.style.width = "20px";
-    sparkle.style.height = "20px";
-    sparkle.style.background = "yellow";
-    sparkle.style.borderRadius = "50%";
-    sparkle.style.opacity = "0.8";
-    sparkle.style.animation = "sparkle 0.5s ease-in-out";
-    document.body.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 500);
-}
 
 setInterval(spawnHeart, 1000);
 setInterval(update, 20);
