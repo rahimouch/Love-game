@@ -9,8 +9,8 @@ class Heart {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 30;
-        this.speed = Math.random() * 2 + 1;
+        this.size = 40;
+        this.speed = Math.random() * 1.5 + 0.5; // Slower hearts
     }
 
     draw() {
@@ -51,16 +51,16 @@ canvas.addEventListener("click", (event) => {
     
     hearts.forEach((heart, index) => {
         if (
-            mouseX > heart.x - 15 &&
-            mouseX < heart.x + 15 &&
-            mouseY > heart.y - 15 &&
-            mouseY < heart.y + 15
+            mouseX > heart.x - 20 &&
+            mouseX < heart.x + 20 &&
+            mouseY > heart.y - 20 &&
+            mouseY < heart.y + 20
         ) {
             hearts.splice(index, 1);
             score++;
             scoreDisplay.innerText = score;
             
-            if (score >= 20) {
+            if (score === 20) {
                 loveLetter.style.display = "block";
             }
         }
