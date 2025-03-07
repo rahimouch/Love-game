@@ -4,9 +4,30 @@ body {
     background-color: #ffccdc;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    position: relative;
 }
 
-h1 {
+/* Background Hearts Effect */
+.background-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('heart.png');
+    background-size: 50px;
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Center Title */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
     color: #ff4081;
     animation: fadeIn 2s ease-in-out;
 }
@@ -41,10 +62,4 @@ canvas {
 @keyframes pulse {
     from { transform: scale(1); }
     to { transform: scale(1.05); }
-}
-
-@keyframes sparkle {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.7; }
-    100% { transform: scale(1); opacity: 1; }
 }
