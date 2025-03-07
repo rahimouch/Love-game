@@ -1,0 +1,50 @@
+/* style.css */
+body {
+    text-align: center;
+    background-color: #ffccdc;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    color: #ff4081;
+    animation: fadeIn 2s ease-in-out;
+}
+
+canvas {
+    background-color: white;
+    display: block;
+    margin: auto;
+    border: 3px solid #ff4081;
+    animation: pulse 2s infinite alternate;
+}
+
+.love-letter {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes sparkle {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
