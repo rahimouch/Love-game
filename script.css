@@ -1,7 +1,7 @@
 /* style.css */
 body {
     text-align: center;
-    background-color: #ffccdc;
+    background-color: pink;
     font-family: Arial, sans-serif;
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@ body {
     background-image: url('heart.png');
     background-size: 80px;
     background-repeat: repeat;
-    opacity: 0.3;
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 canvas {
-    background-color: pink;
+    background-color: white;
     display: block;
     margin: auto;
     border: 3px solid #ff4081;
